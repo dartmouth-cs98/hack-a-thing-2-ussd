@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('*', (req, res) => {
-  res.send('This is tutorial App on creating your first USSD app in 5 minutes or less by Ajala Abdulsamii <kgasta@gmail.com>')
+  res.send('This is tutorial App on creating my first USSD app in 5 minutes or less by Ally Mahmoud <allymahmoud@gmail.com>')
 })
 
 app.post('*', (req, res) => {
@@ -38,7 +38,7 @@ app.post('*', (req, res) => {
     res.send(response)
   } else if (text == '1*2') {
     // This is a second level response where the user selected 1 in the first instance
-    let balance = 'TZS 10,000'
+    let balance = 'TZS 17,000'
     // This is a terminal request. Note how we start the response with END
     let response = `END Your balance is ${balance}`
     res.send(response)
