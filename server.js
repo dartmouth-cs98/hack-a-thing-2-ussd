@@ -54,7 +54,7 @@ app.post('*', (req, res) => {
     const balanceArray = text.split('*');
     const balanceSplit = parseInt(balanceArray[2]);
     let balance = 7000;
-    if (!isNaN(balanceSplit){
+    if(!isNaN(balanceSplit)){
       balance+=balanceSplit;
 
     }
