@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('*', (req, res) => {
-  res.send('This is tutorial App on creating my first USSD app in 5 minutes or less by Ally Mahmoud <allymahmoud@gmail.com>')
+  res.send('Welcome to Simple USSD Mobile Wallet by Ally Mahmoud <allymahmoud64@gmail.com>')
 })
 
 app.post('*', (req, res) => {
@@ -24,7 +24,8 @@ app.post('*', (req, res) => {
     // Business logic for first level response
     let response = `CON Choose account information you want to view
     1. Account number
-    2. Account balance`
+    2. Account balance
+    3. Top Up balance`
     res.send(response)
   } else if (text == '2') {
     // Business logic for first level response
@@ -38,11 +39,32 @@ app.post('*', (req, res) => {
     res.send(response)
   } else if (text == '1*2') {
     // This is a second level response where the user selected 1 in the first instance
-    let balance = 'TZS 17,000'
+    let balance = '$7,000'
     // This is a terminal request. Note how we start the response with END
     let response = `END Your balance is ${balance}`
     res.send(response)
-  } else {
+  } else if (text == '1*3') {
+    // This is a second level response where the user selected 1 in the first instance
+    let balance = '$7,000'
+    // This is a terminal request. Note how we start the response with END
+    let response = `Enter money to top up`
+    res.send(response)
+  }else if (text.startsWith('1*3*')) {
+    // This is a second level response where the user selected 1 in the first instance
+    const balanceArray = text.split('*');
+    const balanceSplit = parseInt(balanceArray[2]);
+    let balance = 7000;
+    if (!isNaN(balanceSplit){
+      balance+=balanceSplit;
+
+    }
+    // This is a terminal request. Note how we start the response with END
+    let response = `Your New Balance is $${balance}`
+    res.send(response)
+  }
+
+
+  else {
     res.status(400).send('Bad request!')
   }
 })
