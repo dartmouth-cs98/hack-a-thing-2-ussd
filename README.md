@@ -18,4 +18,6 @@ Built a simple Mobile Wallet USSD application that users can check their balance
 ## Demo
 * [Click here](https://simulator.africastalking.com:1517/simulator/ussd) to access  the simulator 
 * Then enter any dummy number
-* Then dial \*384*20571# in the simulator to access the mobile wallet
+* Then dial \*384*20571# in the simulator to access the app
+
+![](ussdrun.mov)
