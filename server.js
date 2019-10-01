@@ -39,15 +39,14 @@ app.post('*', (req, res) => {
     res.send(response)
   } else if (text == '1*2') {
     // This is a second level response where the user selected 1 in the first instance
-    let balance = '$7,000'
+    let balance = '$7,000';
     // This is a terminal request. Note how we start the response with END
     let response = `END Your balance is ${balance}`
     res.send(response)
   } else if (text == '1*3') {
     // This is a second level response where the user selected 1 in the first instance
-    let balance = '$7,000'
     // This is a terminal request. Note how we start the response with END
-    let response = `Enter money to top up`
+    let response = `Enter amount to top up`
     res.send(response)
   }else if (text.startsWith('1*3*')) {
     // This is a second level response where the user selected 1 in the first instance
