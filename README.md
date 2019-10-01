@@ -1,15 +1,15 @@
-## Hack-A-Thing-1
+## Hack-A-Thing-2
 ### Ally Mahmoud
-#### September 23, 2019
+#### September 30, 2019
 
 ## Description:
-Developed a price board on react.
+Developed a simple USSD([Unstructured Supplementary Service Data](https://en.wikipedia.org/wiki/Unstructured_Supplementary_Service_Data)) using express server and Africa's talking api.
 
-### Price Board
-Followed this tutorial: robinwieruch.de/complete-firebase-authentication-react-tutorial
+### Simple USSD Mobile Wallet
+Followed this tutorial: https://github.com/AfricasTalkingLtd/africastalking-node.js
 
-Built a price board in React  with a firebase backend. There is a price board where regular users can see differnt product's prices and an admin login in which an admin can login to a an admin panel to add products or update products prices.
+Built a simple Mobile Wallet USSD application that users can check their balance and top up.
 
-* What I learned: React, Firebase
+* What I learned: Africas Talking, Express
 * What worked: The app works!
-* What didn't work: Styling was tricky.
+* What didn't work: Connecting different api can be tricky.
