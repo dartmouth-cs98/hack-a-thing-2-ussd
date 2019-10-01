@@ -20,4 +20,4 @@ Built a simple Mobile Wallet USSD application that users can check their balance
 * Then enter any dummy number
 * Then dial \*384*20571# in the simulator to access the app
 
-![](ussdrun.mov)
+![Demo Video](ussdrun.gif)
